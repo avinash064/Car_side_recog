@@ -11,7 +11,7 @@
 
 **Pre-trained TFLite Model (Ready for Mobile Deployment)**
 
-- **Download:** [viewpoint_classifier_float32.tflite](#) ⬅️ **Upload to Google Drive and replace this link**
+- **Download:** [viewpoint_classifier_float32.tflite](https://drive.google.com/file/d/1VSQf0p9JlgmAAPqRoSOKQjh9bmadYSZj/view?usp=sharing) 📦
 - **Size:** 2.40 MB
 - **Accuracy:** 87.22%
 - **Format:** TensorFlow Lite (Float32)
