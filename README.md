@@ -1,4 +1,75 @@
-# Car Side Recognition Project
+# Car Viewpoint Classifier 🚗
+
+**High-accuracy car viewpoint classification for mobile deployment**
+
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10-orange.svg)](https://tensorflow.org)
+[![Accuracy](https://img.shields.io/badge/Accuracy-87.22%25-success.svg)](#performance)
+[![Model Size](https://img.shields.io/badge/Model%20Size-2.40%20MB-blue.svg)](#model-download)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+## 📥 Model Download
+
+**Pre-trained TFLite Model (Ready for Mobile Deployment)**
+
+- **Download:** [viewpoint_classifier_float32.tflite](#) ⬅️ **Upload to Google Drive and replace this link**
+- **Size:** 2.40 MB
+- **Accuracy:** 87.22%
+- **Format:** TensorFlow Lite (Float32)
+- **Input:** 224×224×3 RGB images
+- **Output:** 7 classes (6 viewpoints + unknown)
+
+### Quick Start
+```python
+import tensorflow as tf
+import numpy as np
+from PIL import Image
+
+# Load model
+interpreter = tf.lite.Interpreter(model_path="viewpoint_classifier_float32.tflite")
+interpreter.allocate_tensors()
+
+# Prepare image
+image = Image.open("car.jpg").resize((224, 224))
+image_array = np.array(image).astype(np.float32) / 255.0
+image_array = np.expand_dims(image_array, axis=0)
+
+# Run inference
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+interpreter.set_tensor(input_details[0]['index'], image_array)
+interpreter.invoke()
+predictions = interpreter.get_tensor(output_details[0]['index'])[0]
+
+# Get result
+classes = ["front", "frontleft", "frontright", "rear", "rearleft", "rearright", "unknown"]
+predicted_class = classes[np.argmax(predictions)]
+confidence = np.max(predictions)
+print(f"Predicted: {predicted_class} ({confidence*100:.2f}%)")
+```
+
+---
+
+## 📊 Performance
+
+| Metric | Value |
+|--------|-------|
+| **Overall Accuracy** | **87.22%** |
+| **Model Size** | 2.40 MB |
+| **Parameters** | 2.27M |
+| **Architecture** | MobileNetV2 |
+
+### Per-Class Accuracy
+| Viewpoint | Accuracy |
+|-----------|----------|
+| Front | 96.26% ⭐ |
+| Front Right | 92.74% |
+| Rear Left | 90.45% |
+| Rear Right | 89.50% |
+| Rear | 83.04% |
+| Unknown | 82.57% |
+| Front Left | 81.67% |
+
+---
 
 ## Overview
 This project implements a car orientation/perspective classification system for mobile edge devices using TensorFlow Lite.
