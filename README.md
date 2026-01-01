@@ -18,6 +18,13 @@
 - **Input:** 224×224×3 RGB images
 - **Output:** 7 classes (6 viewpoints + unknown)
 
+### 📦 Available Models
+
+| Model | Size | Accuracy | Download Link |
+|-------|------|----------|---------------|
+| **Float32** | 2.40 MB | 87.22% | [Download](https://drive.google.com/file/d/1VSQf0p9JlgmAAPqRoSOKQjh9bmadYSZj/view?usp=sharing) |
+| **INT8** | 2.59 MB | ~85-87% | [Download](https://drive.google.com/file/d/1zptscx9C15SrVkQiFiRc6WaLzgfbvXC0/view?usp=sharing) |
+
 ### Class Labels
 ```python
 classes = ["front", "frontleft", "frontright", "rear", "rearleft", "rearright", "unknown"]
