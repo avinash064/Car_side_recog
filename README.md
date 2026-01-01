@@ -7,7 +7,9 @@
 [![Model Size](https://img.shields.io/badge/Model%20Size-2.40%20MB-blue.svg)](#model-download)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**[🚀 Try Live Demo →](https://your-app-name.streamlit.app)** *(Deploy first, then update this link)*
+**Live Demos:**
+- 🚀 **[Classification Demo →](https://car-viewpoint-classifier.streamlit.app)** (Trained Model)
+- 🔍 **[FAISS Similarity Demo →](https://car-viewpoint-mobilenet.streamlit.app)** (MobileNet Features)
 
 ---
 
