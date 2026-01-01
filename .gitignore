@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+tf_gpu_venv/
+venv/
+env/
+ENV/
+
+# Datasets (too large for Git)
+cfv_viewpoint_train/
+cropped_dataset/
+exercise_1/
+epfl-gims08/
+labeled_dataset/
+traindata/
+organized_perspectives/
+perspective_samples/
+traindata_visualizations/
+visualizations/
+CFV-Dataset/
+car_viewpoint_system/
+
+# Model files (too large)
+*.h5
+*.tflite
+viewpoint_model_savedmodel/
+tflite_models/
+models/
+best_viewpoint_model.h5
+
+# Large downloads
+Miniconda3-latest-Windows-x86_64.exe
+
+# HTML reports
+*.html
+cfv_visualization_report.html
+
+# Training artifacts
+training_history.png
+training_history_resumed.png
+
+# Temporary files
+*.tmp
+*.log
+check_env_temp.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Documents (keep only essential docs)
+*.docx
+*.pdf
