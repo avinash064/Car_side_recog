@@ -28,11 +28,11 @@ visualizations/
 CFV-Dataset/
 car_viewpoint_system/
 
-# Model files (too large)
+# Model files (too large for Git)
 *.h5
-*.tflite
+# *.tflite  # Commented out to allow TFLite models in repo
 viewpoint_model_savedmodel/
-tflite_models/
+# tflite_models/  # Commented out to allow TFLite models in repo
 models/
 best_viewpoint_model.h5
 
