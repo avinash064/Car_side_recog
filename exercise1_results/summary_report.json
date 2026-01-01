@@ -1,0 +1,31 @@
+{
+  "total_images": 3792,
+  "threshold": 0.75,
+  "prediction_distribution": {
+    "rearleft": 870,
+    "frontright": 445,
+    "unknown": 1511,
+    "rearright": 217,
+    "rear": 196,
+    "front": 101,
+    "frontleft": 452
+  },
+  "mean_confidence_by_class": {
+    "front": 0.9716115068681169,
+    "frontleft": 0.9666893393856234,
+    "frontright": 0.973486748572146,
+    "rear": 0.9703311540034353,
+    "rearleft": 0.9710739652315775,
+    "rearright": 0.9679703575125488,
+    "unknown": 0.967697233178614
+  },
+  "class_names": [
+    "front",
+    "frontleft",
+    "frontright",
+    "rear",
+    "rearleft",
+    "rearright",
+    "unknown"
+  ]
+}
